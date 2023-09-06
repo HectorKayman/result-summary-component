@@ -35,4 +35,9 @@
     var(--clr-primary-500),
     hsl(var(--clr-secondary-hsl-500), 0)
   );
+
+  --clr-accent-1: 0, 100%, 67%;
+  --clr-accent-2: 39, 100%, 56%;
+  --clr-accent-3: 166, 100%, 37%;
+  --clr-accent-4: 234, 85%, 45%;
 }
