@@ -21,4 +21,8 @@
   --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
   --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
   --clr-neutral-700: hsl(var(--clr-neutral-hsl-700));
+
+  --clr-primary-400: hsl(var(--clr-primary-hsl-400));
+  --clr-primary-500: hsla(var(--clr-primary-hsl-500));
+  --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
 }
