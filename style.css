@@ -85,3 +85,8 @@ body {
     place-items: center;
   }
 }
+
+.section-title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
+}
