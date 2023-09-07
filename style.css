@@ -149,3 +149,11 @@ body {
     border-radius: var(--br-radius);
   }
 }
+
+.result-score {
+  width: 12rem;
+  margin-inline: auto;
+  background: var(--gradient-to-transparent);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
