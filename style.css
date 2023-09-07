@@ -139,14 +139,10 @@ body {
   }
 }
 
-.results,
-.summary {
-  padding: var(--padding);
-}
-
 .results {
   color: hsl(var(--clr-neutral-hsl-100), 0.8);
   text-align: center;
+  padding: var(--padding) calc(var(--padding) * 1.5);
   border-radius: 0 0 var(--br-radius) var(--br-radius);
   background: var(--gradient-primary);
 }
@@ -179,6 +175,10 @@ body {
   color: var(--clr-neutral-100);
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
+}
+
+.summary {
+  padding: var(--padding);
 }
 
 .summary-item {
