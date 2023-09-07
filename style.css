@@ -99,3 +99,8 @@ body {
   border-radius: 100vw;
   cursor: pointer;
 }
+
+.button:hover,
+.button:focus-visible {
+  background: var(--gradient-primary);
+}
