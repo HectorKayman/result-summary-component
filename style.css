@@ -106,6 +106,7 @@ body {
 }
 
 .result-summary {
+  --padding: 2.5rem;
   --br-radius: 2rem;
   max-width: 46rem;
   display: grid;
@@ -118,6 +119,11 @@ body {
     overflow: hidden;
     box-shadow: 0.5rem 1rem 3rem hsl(var(--clr-neutral-hsl-700), 0.2);
   }
+}
+
+.results,
+.summary {
+  padding: var(--padding);
 }
 
 .results {
