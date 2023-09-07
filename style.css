@@ -1,3 +1,4 @@
+/* Define the custom font 'HankenGrotesk' and its properties */
 @font-face {
   font-family: "HankenGrotesk";
   font-display: swap;
@@ -6,17 +7,23 @@
     format("truetype");
 }
 
+/* Define root-level custom properties for color values */
 :root {
+  /* Primary colors */
   --clr-primary-hsl-400: 252, 100%, 67%;
   --clr-primary-hsl-500: 256, 72%, 46%;
+
+  /* Secondary colors */
   --clr-secondary-hsl-400: 241, 81%, 54%;
   --clr-secondary-hsl-500: 241, 72%, 46%;
 
+  /* Neutral colors */
   --clr-neutral-hsl-100: 0, 0%, 100%;
   --clr-neutral-hsl-200: 221, 100%, 96%;
   --clr-neutral-hsl-300: 241, 100%, 89%;
   --clr-neutral-hsl-700: 224, 30%, 27%;
 
+  /* Convert HSL values to usable color values */
   --clr-neutral-100: hsl(var(--clr-neutral-hsl-100));
   --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
   --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
@@ -26,27 +33,29 @@
   --clr-primary-500: hsla(var(--clr-primary-hsl-500));
   --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
 
+  /* Define gradient backgrounds */
   --gradient-primary: linear-gradient(
     var(--clr-primary-400),
     var(--clr-secondary-400)
   );
-
   --gradient-to-transparent: linear-gradient(
     var(--clr-primary-500),
     hsl(var(--clr-secondary-hsl-500), 0)
   );
 
+  /* Define accent colors */
   --clr-accent-1: 0, 100%, 67%;
   --clr-accent-2: 39, 100%, 56%;
   --clr-accent-3: 166, 100%, 37%;
   --clr-accent-4: 234, 85%, 45%;
 
+  /* Define font families and weights */
   --font-family-default: "HankenGrotesk", sans-serif;
-
   --fw-regular: 500;
   --fw-bold: 700;
   --fw-black: 800;
 
+  /* Define font sizes */
   --fs-400: 1.125rem;
   --fs-500: 1.25rem;
   --fs-600: 1.5rem;
@@ -55,6 +64,7 @@
   --fs-900: 5rem;
 }
 
+/* Apply box-sizing to all elements and reset margin and font styles */
 *,
 *::before,
 *::after {
@@ -66,19 +76,23 @@
   font: inherit;
 }
 
+/* Style images and SVGs */
 img,
 svg {
   display: block;
   max-width: 100%;
 }
 
+/* Style the body with custom fonts, font size, and color */
 body {
   font-family: var(--font-family-default);
   font-size: var(--fs-400);
   color: var(--clr-neutral-700);
 }
 
+/* Media query for larger screens */
 @media (min-width: 600px) {
+  /* Center the body content vertically */
   body {
     min-height: 100vh;
     display: grid;
@@ -86,6 +100,7 @@ body {
   }
 }
 
+/* Style for a flex container for grouping items */
 .flex-group {
   display: flex;
   align-items: center;
@@ -93,21 +108,25 @@ body {
   flex-wrap: wrap;
 }
 
+/* Style for a grid container with specific alignment and gap */
 .grid-flow {
   display: grid;
   align-content: start;
   gap: 1rem;
 }
 
+/* Adjust the gap for large spacing in the grid container */
 .grid-flow[data-spacing="large"] {
   gap: 2rem;
 }
 
+/* Style for section titles with font weight and font size */
 .section-title {
   font-weight: var(--fw-bold);
   font-size: var(--fs-600);
 }
 
+/* Style for buttons with color, background, and padding */
 .button {
   color: var(--clr-neutral-100);
   line-height: 1;
@@ -117,11 +136,13 @@ body {
   cursor: pointer;
 }
 
+/* Hover and focus styles for buttons */
 .button:hover,
 .button:focus-visible {
   background: var(--gradient-primary);
 }
 
+/* Style for the result summary container */
 .result-summary {
   --padding: 2.5rem;
   --br-radius: 2rem;
@@ -129,7 +150,9 @@ body {
   display: grid;
 }
 
+/* Media query for larger screens */
 @media (min-width: 600px) {
+  /* Adjust margin, columns, border radius, shadow, and overflow for result summary */
   .result-summary {
     margin-inline: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -139,6 +162,7 @@ body {
   }
 }
 
+/* Style for the results section */
 .results {
   color: hsl(var(--clr-neutral-hsl-100), 0.8);
   text-align: center;
@@ -147,12 +171,15 @@ body {
   background: var(--gradient-primary);
 }
 
+/* Media query for larger screens */
 @media (min-width: 600px) {
+  /* Adjust border radius for results section */
   .results {
     border-radius: var(--br-radius);
   }
 }
 
+/* Style for the result score container */
 .result-score {
   display: grid;
   place-content: center;
@@ -163,6 +190,7 @@ body {
   border-radius: 50%;
 }
 
+/* Style for the score value inside the result score container */
 .result-score span {
   display: block;
   font-size: var(--fs-900);
@@ -171,16 +199,19 @@ body {
   color: var(--clr-neutral-100);
 }
 
+/* Style for the result rank */
 .result-rank {
   color: var(--clr-neutral-100);
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
 }
 
+/* Style for the summary section */
 .summary {
   padding: var(--padding);
 }
 
+/* Style for summary items with specific colors */
 .summary-item {
   display: flex;
   justify-content: space-between;
@@ -190,11 +221,13 @@ body {
   background-color: hsl(var(--item-color), 0.1);
 }
 
+/* Style for summary item titles with font weight and color */
 .summary-item-title {
   color: hsl(var(--item-color));
   font-weight: var(--fw-bold);
 }
 
+/* Different styles for summary items based on data attributes */
 .summary-item[data-item-type="accent-1"] {
   --item-color: var(--clr-accent-1);
 }
@@ -211,11 +244,13 @@ body {
   --item-color: var(--clr-accent-4);
 }
 
+/* Style for the summary score */
 .summary-score {
   font-weight: var(--fw-black);
   color: hsl(var(--clr-neutral-hsl-700), 0.5);
 }
 
+/* Style for the summary score value */
 .summary-score span {
   color: var(--clr-neutral-700);
 }
