@@ -104,3 +104,8 @@ body {
 .button:focus-visible {
   background: var(--gradient-primary);
 }
+
+.result-summary {
+  max-width: 46rem;
+  display: grid;
+}
