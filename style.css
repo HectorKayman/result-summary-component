@@ -114,6 +114,7 @@ body {
 
 @media (min-width: 600px) {
   .result-summary {
+    margin-inline: 1rem;
     grid-template-columns: 1fr 1fr;
     border-radius: var(--br-radius);
     overflow: hidden;
